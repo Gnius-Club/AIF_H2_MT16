@@ -1,24 +1,279 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Playbook — 2º Preparatoria — Misión M16: Orquestación del Agente</title>
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
+  <header>
+    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M16: Orquestación del Agente</strong></h1>
+    <div class="header-widgets">
+      <div class="timer-container">
+        <span id="timer">⏱️ 00:00</span>
+        <button id="startStop">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-input">
+          <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="activity-list">
+      <h2>Actividades</h2>
+      <ul>
+        <li><a href="#activity-0">📝</a></li>
+        <li><a href="#activity-1">1</a></li>
+        <li><a href="#activity-2">2</a></li>
+        <li><a href="#activity-3">3</a></li>
+        <li><a href="#activity-4">4</a></li>
+        <li><a href="#activity-5">5</a></li>
+      </ul>
+      <div class="sidebar-info">
+        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+      </div>
+    </aside>
+    <main class="content">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+      <section class="activity-card" id="activity-0">
+        <h2 class="activity-title">📝 De un Vistazo: Misión M16: Orquestación del Agente</h2>
+        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
+        <div class="overview">
+          <section class="overview-block">
+            <h3>Objetivos e “I Can”</h3>
+            <ul>
+              <li>Puedo describir el flujo de orquestación de un agente de IA que gestiona el diálogo con un LLM.</li>
+              <li>Puedo implementar un bucle de orquestación en Python para ejecutar herramientas basadas en la instrucción de un LLM.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Secuencia y tiempos</h3>
+            <ol>
+              <li>Saludo Interactivo con IA — 3 min</li>
+              <li>“I Can” + Desafío — 5–7 min</li>
+              <li>AI GYM — 10–12 min</li>
+              <li>Brain Spark — 17–20 min</li>
+              <li>GNIUS STORM — 5 min</li>
+            </ol>
+          </section>
+          <section class="overview-block">
+            <h3>Entregable del Micro-Proyecto</h3>
+            <ul>
+              <li>Un script Python funcional que implemente el bucle de orquestación de un agente de IA.</li>
+              <li>El script debe ser capaz de recibir una petición en lenguaje natural y ejecutar la herramienta correcta (ej.: `send_email`, `search_wikipedia`) utilizando las herramientas diseñadas en M15.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Criterios de calidad</h3>
+            <ul>
+              <li>Claridad en la gestión del diálogo con el LLM (envío de prompt y esquema de herramientas, recepción de instrucción).</li>
+              <li>Correcta ejecución de funciones Python correspondientes a las herramientas, basadas en la instrucción del LLM.</li>
+              <li>Implementación funcional del bucle de orquestación que devuelve el resultado al LLM.</li>
+              <li>Uso adecuado del Function Calling para la interacción LLM-herramienta.</li>
+              <li>Capacidad del agente para procesar peticiones en lenguaje natural y mapear a herramientas.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Materiales y preparación</h3>
+            <ul>
+              <li>Proyector e internet</li>
+              <li>LLM (acceso a un modelo con capacidades de Function Calling)</li>
+              <li>IDE/CLI/Notebook (entorno de desarrollo Python)</li>
+              <li>API pública/clave (si las herramientas de M15 lo requieren)</li>
+              <li>Repositorio/documentación de evidencia</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <section class="activity-card" id="activity-1">
+        <h2 class="activity-title">Saludo Interactivo con IA</h2>
+        <p class="activity-purpose">Establecer el foco (agentes) y activar a Xolo con perfil+intereses del estudiante.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
+              <p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema de la misión y valor profesional: Agentes: por qué separar conversación de acción (System Prompt, ReAct), usar herramientas con schemas, dar memoria (RAG), poner guardrails e incorporar HITL.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Equipo, hoy profundizaremos en la orquestación de agentes de IA, un componente clave para construir sistemas inteligentes capaces de interactuar con el mundo real. Aprenderemos a dirigir al LLM para que use herramientas de forma autónoma, transformando intenciones en acciones concretas.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
+              <p class="step-instructions">Cada estudiante envía a Xolo: “Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Misión M16: Orquestación del Agente. Necesito foco en la orquestación de agentes y el Function Calling.”</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas. Necesito foco en la orquestación de agentes y el Function Calling.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-card" id="activity-2">
+        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
+        <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
+              <p class="step-instructions">Proyectar Diapositiva 3. Describe el reto y la meta observable, derivados de Columna 1 y 3. Variantes: Agentes: configurar un proto-agente (Custom GPT/Artifacts), escribir System Prompt con CoT + Self-Critique, diseñar ReAct (pseudocódigo), definir tools (función + schema JSON), orquestar loop, montar RAG, idear guardrails, proponer HITL, desplegar un endpoint.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Hoy, el reto es convertirse en 'Directores de Orquesta de IA'. Lograrán implementar un script Python que orqueste el diálogo con un LLM, permitiéndole seleccionar y ejecutar la herramienta adecuada en respuesta a una petición en lenguaje natural. El éxito se medirá por la capacidad del agente de interpretar la intención y activar la función correcta.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
+              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” concreto alineado al entregable de Columna 2.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo [acción] usando [criterio] para lograr [resultado].” Por ejemplo: “Puedo implementar un bucle de orquestación que permita a un agente de IA ejecutar herramientas externas de manera autónoma, interpretando peticiones en lenguaje natural.”</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-card" id="activity-3">
+        <h2 class="activity-title">AI GYM</h2>
+        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Marco del día</h3>
+              <p class="step-instructions">Proyectar Diapositiva 5. Introduce el marco según Columna 3 (Agentes: Agente vs Chatbot; System Prompt; CoT & Self-Critique; ReAct (Reason+Act); Function Calling (función Python + schema JSON); orquestación; RAG (chunking/embeddings/store/retrieval); prompt injection & guardrails; multi-agente; tokens/costos; HITL; despliegue API).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El marco central de hoy es la **Orquestación de Agentes mediante Function Calling**. Esto permite que un LLM no solo genere texto, sino que también interactúe con sistemas externos. Un error común es no definir claramente el esquema de las herramientas o no manejar adecuadamente la respuesta del LLM. Eviten esto asegurando que el LLM reciba la información precisa de las herramientas y que su código pueda interpretar y ejecutar la acción sugerida.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Mini-demostración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 6. Construye un ejemplo mínimo (mapeo de datos en Make, condición de Filtro, parseo de un JSON, llamada HTTP, directiva de error, “call tool” simulado, paso de retrieval, validación anti-injection).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Observa cómo un LLM, al recibir una petición como 'Envía un email a Juan con el asunto "Reunión" y el cuerpo "Agenda adjunta"', puede identificar la necesidad de usar una herramienta `send_email`. El bucle de orquestación entonces toma esta instrucción, ejecuta la función `send_email` con los parámetros extraídos, y devuelve el resultado al LLM. Verifica que el LLM pueda identificar la herramienta y que la función se ejecute correctamente.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Check rápido</h3>
+              <p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Pregunta 1: ¿Por qué es crucial el esquema de herramientas para el Function Calling? Pregunta 2: ¿Qué sucede si el LLM sugiere una herramienta que no está definida?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-card" id="activity-4">
+        <h2 class="activity-title">Brain Spark</h2>
+        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Producción</h3>
+              <p class="step-instructions">Proyectar Diapositiva 8. Indica el producto específico (Columna 2) y un checklist de calidad (Columna 3). Tiempo de trabajo autónomo.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">N/A</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Iteración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 9. Pide una mejora concreta (p. ej., añadir un Filtro robusto; transformar 2 campos más; manejar un error; descomponer en sub-escenario; añadir Self-Critique; explicitar “Observation/Thought/Action” en ReAct; validar tool schema; implementar retrieval top-k; introducir un guardrail; reducir tokens; insertar punto HITL; refactor a endpoint).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Antes de cerrar: valida que tu script pueda manejar al menos dos herramientas distintas y que la orquestación sea robusta ante variaciones en la petición del usuario. Si no se cumple, ajusta el bucle de orquestación y el manejo de respuestas del LLM.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Evidencia</h3>
+              <p class="step-instructions">Proyectar Diapositiva 10. Solicita evidencia: [enlace/capturas/código/pseudocódigo/logs/esquemas/JSON/endpoint/cálculo de costos, según corresponda].</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Entrega con nombre: `M16_OrquestacionAgente_[Equipo/Nombre]`. Incluye el script Python de orquestación, el esquema de las herramientas y una captura de pantalla de una ejecución exitosa donde el agente use una herramienta.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="activity-card" id="activity-5">
+        <h2 class="activity-title">GNIUS STORM</h2>
+        <p class="activity-purpose">Exhibición breve y cierre ejecutivo.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
+              <p class="step-instructions">2–3 presentaciones de 30–45 s, centradas en evidencia y criterio.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Enfoca tu presentación en cómo tu orquestador de agente interpreta la intención del usuario y activa la herramienta correcta, mostrando la evidencia de ejecución.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
+              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje, 1 criterio que más impactó el resultado, 1 siguiente paso aplicable fuera del aula (p. ej., publicar el endpoint, activar/pausar escenario Make con schedule, integrar guardrail en otra ruta, extender RAG, medir costo real en un día).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Síntesis: El aprendizaje clave es que la orquestación permite a los LLMs pasar de ser solo 'habladores' a 'hacedores'. El criterio que más impactó el resultado fue la precisión en la definición del esquema de herramientas. Un siguiente paso aplicable es integrar este orquestador en un chatbot real o una aplicación web para automatizar tareas complejas.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
